@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Creation Academy - Uganda's Path to Prosperity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --nrm-yellow: #FFCE00;
+            --nrm-red: #D62828;
+            --uganda-black: #000000;
+            --uganda-yellow: #FCDC04;
+            --uganda-red: #D90000;
+            --primary: #FFCE00;
+            --secondary: #1a1a2e;
+            --accent: #D62828;
+            --success: #06D6A0;
+            --danger: #EF476F;
+            --text: #ffffff;
+            --text-dark: #0f3460;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b00 50%, #1a1100 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, 
+                var(--uganda-black) 0%, 
+                var(--uganda-black) 16.66%, 
+                var(--uganda-yellow) 16.66%, 
+                var(--uganda-yellow) 33.33%, 
+                var(--uganda-red) 33.33%, 
+                var(--uganda-red) 50%, 
+                var(--uganda-black) 50%, 
+                var(--uganda-black) 66.66%, 
+                var(--uganda-yellow) 66.66%, 
+                var(--uganda-yellow) 83.33%, 
+                var(--uganda-red) 83.33%, 
+                var(--uganda-red) 100%
+            );
+            z-index: 1000;
+        }
+
+        body::after {
+            content: 'NRM';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30vw;
+            font-weight: 900;
+            opacity: 0.02;
+            z-index: 0;
+            pointer-events: none;
+            font-family: 'Bebas Neue', cursive;
+            color: var(--nrm-yellow);
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.15), rgba(214, 40, 40, 0.1));
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 206, 0, 0.4);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 206, 0, 0.2);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 206, 0, 0.15), transparent);
+            animation: shine 3s infinite;
+        }
+
+        .nrm-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .nrm-logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--nrm-yellow);
+            border: 4px solid var(--nrm-yellow);
+            box-shadow: 0 5px 20px rgba(255, 206, 0, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .uganda-flag {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .flag-stripe {
+            flex: 1;
+        }
+
+        .flag-black { background: #000000; }
+        .flag-yellow { background: #FCDC04; }
+        .flag-red { background: #D90000; }
+
+        .flag-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .header h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: clamp(2rem, 5vw, 4rem);
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            filter: drop-shadow(0 0 20px rgba(255, 206, 0, 0.5));
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            color: var(--nrm-yellow);
+            font-weight: 600;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.1), rgba(214, 40, 40, 0.05));
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 206, 0, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 206, 0, 0.4);
+            border-color: var(--nrm-yellow);
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            color: var(--nrm-yellow);
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-modes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .mode-card {
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.2), rgba(214, 40, 40, 0.1));
+            padding: 30px;
+            border-radius: 20px;
+            border: 3px solid rgba(255, 206, 0, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mode-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 206, 0, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .mode-card:hover::before {
+            left: 100%;
+        }
+
+        .mode-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 206, 0, 0.5);
+            border-color: var(--nrm-yellow);
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.25), rgba(214, 40, 40, 0.15));
+        }
+
+        .mode-card h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .mode-card p {
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .mode-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .game-screen {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .game-screen.active {
+            display: block;
+        }
+
+        .question-card {
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.1), rgba(214, 40, 40, 0.05));
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 206, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .question-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .options {
+            display: grid;
+            gap: 15px;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .option:hover {
+            background: rgba(255, 206, 0, 0.25);
+            border-color: var(--nrm-yellow);
+            transform: translateX(10px);
+        }
+
+        .option.correct {
+            background: rgba(6, 214, 160, 0.3);
+            border-color: var(--success);
+            animation: pulse 0.5s ease;
+        }
+
+        .option.incorrect {
+            background: rgba(239, 71, 111, 0.3);
+            border-color: var(--danger);
+            animation: shake 0.5s ease;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--nrm-red), var(--nrm-yellow));
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            color: #000000;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 20px rgba(255, 206, 0, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 206, 0, 0.6);
+            background: linear-gradient(135deg, #FFA500, var(--nrm-yellow));
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .match-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .match-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .match-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .match-item:hover {
+            background: rgba(255, 206, 0, 0.25);
+            border-color: var(--nrm-yellow);
+        }
+
+        .match-item.selected {
+            background: rgba(255, 206, 0, 0.35);
+            border-color: var(--nrm-yellow);
+            box-shadow: 0 5px 20px rgba(255, 206, 0, 0.4);
+        }
+
+        .match-item.matched {
+            background: rgba(6, 214, 160, 0.3);
+            border-color: var(--success);
+            pointer-events: none;
+        }
+
+        .achievement-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.98), rgba(255, 165, 0, 0.98));
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            z-index: 1000;
+            transition: transform 0.5s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 4px solid var(--nrm-red);
+        }
+
+        .achievement-popup.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .achievement-popup h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3rem;
+            color: #000000;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievement-popup .icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .business-simulator {
+            display: grid;
+            gap: 20px;
+        }
+
+        .business-card {
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.1), rgba(214, 40, 40, 0.05));
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 206, 0, 0.3);
+        }
+
+        .business-card h3 {
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .investment-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .investment-btn {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .investment-btn:hover {
+            background: rgba(255, 206, 0, 0.25);
+            border-color: var(--nrm-yellow);
+        }
+
+        .leaderboard {
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.1), rgba(214, 40, 40, 0.05));
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 206, 0, 0.4);
+        }
+
+        .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid var(--nrm-yellow);
+        }
+
+        .leaderboard-item.rank-1 {
+            border-left-color: var(--nrm-yellow);
+            background: rgba(255, 206, 0, 0.15);
+        }
+
+        .leaderboard-item.rank-2 {
+            border-left-color: #C0C0C0;
+        }
+
+        .leaderboard-item.rank-3 {
+            border-left-color: #CD7F32;
+        }
+
+        @media (max-width: 768px) {
+            .match-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .timer {
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .feedback-message {
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .feedback-message.success {
+            background: rgba(6, 214, 160, 0.2);
+            border: 2px solid var(--success);
+            color: var(--success);
+        }
+
+        .feedback-message.error {
+            background: rgba(239, 71, 111, 0.2);
+            border: 2px solid var(--danger);
+            color: var(--danger);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+            border-top: 3px solid rgba(255, 206, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 206, 0, 0.05), rgba(214, 40, 40, 0.03));
+            border-radius: 20px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .footer .nrm-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--nrm-yellow), #FFA500);
+            color: #000000;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(255, 206, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="nrm-logo-container">
+                <div class="nrm-logo">NRM</div>
+                <div class="uganda-flag" style="position: relative;">
+                    <div class="flag-stripe flag-black"></div>
+                    <div class="flag-stripe flag-yellow"></div>
+                    <div class="flag-stripe flag-red"></div>
+                    <div class="flag-stripe flag-black"></div>
+                    <div class="flag-stripe flag-yellow"></div>
+                    <div class="flag-stripe flag-red"></div>
+                    <div class="flag-center">🦅</div>
+                </div>
+            </div>
+            <h1>🇺🇬 Wealth Creation Academy</h1>
+            <p>Master Uganda's 4 Sectors & 7 Ways to Prosperity</p>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <h3>Total Points</h3>
+                <div class="value" id="totalPoints">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Level</h3>
+                <div class="value" id="level">1</div>
+            </div>
+            <div class="stat-card">
+                <h3>Achievements</h3>
+                <div class="value" id="achievements">0/15</div>
+            </div>
+            <div class="stat-card">
+                <h3>Streak</h3>
+                <div class="value" id="streak">0🔥</div>
+            </div>
+        </div>
+
+        <!-- Main Menu -->
+        <div id="mainMenu" class="game-screen active">
+            <div class="game-modes">
+                <div class="mode-card" onclick="startGame('quiz')">
+                    <div class="icon">📚</div>
+                    <h2>Knowledge Quiz</h2>
+                    <p>Test your understanding of the 4 sectors and 7 ways of wealth creation</p>
+                    <button class="btn">Start Learning</button>
+                </div>
+
+                <div class="mode-card" onclick="startGame('match')">
+                    <div class="icon">🎯</div>
+                    <h2>Match Challenge</h2>
+                    <p>Match sectors with their examples and strategies</p>
+                    <button class="btn">Start Matching</button>
+                </div>
+
+                <div class="mode-card" onclick="startGame('business')">
+                    <div class="icon">💼</div>
+                    <h2>Business Simulator</h2>
+                    <p>Make investment decisions based on the 4 acres plan</p>
+                    <button class="btn">Start Business</button>
+                </div>
+
+                <div class="mode-card" onclick="startGame('speed')">
+                    <div class="icon">⚡</div>
+                    <h2>Speed Round</h2>
+                    <p>Answer as many questions as you can in 60 seconds</p>
+                    <button class="btn">Start Challenge</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Game -->
+        <div id="quizGame" class="game-screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="quizProgress">Question <span id="questionNum">1</span>/10</div>
+            </div>
+            
+            <div class="question-card">
+                <h2 id="quizQuestion"></h2>
+                <div class="options" id="quizOptions"></div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Match Game -->
+        <div id="matchGame" class="game-screen">
+            <div class="progress-bar">
+                <div class="progress-fill" id="matchProgress">Matches: <span id="matchCount">0</span>/7</div>
+            </div>
+
+            <div class="question-card">
+                <h2>Match the sectors/ways with their examples!</h2>
+                <p style="margin-bottom: 20px;">Click on items from each column to match them</p>
+                
+                <div class="match-container" id="matchContainer"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Business Simulator -->
+        <div id="businessGame" class="game-screen">
+            <div class="business-simulator">
+                <div class="question-card">
+                    <h2>🌾 4 Acres Farm Simulator</h2>
+                    <p>You have 4 acres of land and UGX 10,000,000 to start. Make smart investments!</p>
+                    
+                    <div style="margin: 20px 0;">
+                        <div class="stat-card">
+                            <h3>Available Budget</h3>
+                            <div class="value" id="budget">10,000,000</div>
+                            <small>UGX</small>
+                        </div>
+                    </div>
+
+                    <div id="businessScenario"></div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn" onclick="nextBusinessScenario()">Next Scenario</button>
+                <button class="btn btn-secondary" onclick="backToMenu()">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Speed Round -->
+        <div id="speedGame" class="game-screen">
+            <div class="timer" id="timer">60</div>
+            
+            <div class="question-card">
+                <h2 id="speedQuestion"></h2>
+                <div class="options" id="speedOptions"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <div class="stat-card">
+                    <h3>Correct Answers</h3>
+                    <div class="value" id="speedScore">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="nrm-logo" style="width: 60px; height: 60px; margin: 0 auto 15px; font-size: 1.8rem;">NRM</div>
+            <p><strong>Wealth Creation Academy</strong></p>
+            <p>Empowering Ugandans through Economic Education</p>
+            <p style="font-size: 0.9rem; margin-top: 15px;">Based on President Yoweri Kaguta Museveni's 4 Sectors & 7 Ways Framework</p>
+            <div class="nrm-badge">National Resistance Movement</div>
+            <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.6;">
+                Learn • Grow • Prosper 🇺🇬
+            </p>
+        </div>
+    </div>
+
+    <!-- Achievement Popup -->
+    <div class="achievement-popup" id="achievementPopup">
+        <div class="icon">🏆</div>
+        <h2 id="achievementTitle"></h2>
+        <p id="achievementDesc"></p>
+        <button class="btn" onclick="closeAchievement()">Awesome!</button>
+    </div>
+
+    <script>
+        // Game State
+        const gameState = {
+            points: 0,
+            level: 1,
+            achievements: [],
+            streak: 0,
+            currentQuiz: 0,
+            budget: 10000000,
+            businessScenario: 0
+        };
+
+        // Quiz Questions
+        const quizQuestions = [
+            {
+                question: "How many main sectors for wealth creation did President Museveni identify?",
+                options: ["3 sectors", "4 sectors", "5 sectors", "7 sectors"],
+                correct: 1,
+                explanation: "The 4 sectors are: Commercial Agriculture, Industries, Services, and ICT"
+            },
+            {
+                question: "What percentage of Ugandan homesteads were still in subsistence farming?",
+                options: ["45%", "52%", "68%", "75%"],
+                correct: 2,
+                explanation: "68% of homesteads were in subsistence farming, which is considered a path to poverty"
+            },
+            {
+                question: "According to the 4 acres plan, how much revenue can one acre of clonal coffee generate per year?",
+                options: ["UGX 8 million", "UGX 12 million", "UGX 18 million", "UGX 24 million"],
+                correct: 2,
+                explanation: "One acre of clonal coffee can generate UGX 18 million per year"
+            },
+            {
+                question: "Which is NOT one of the 7 ways of wealth creation?",
+                options: ["Coffee farming", "Fruit farming", "Gold mining", "Dairy farming"],
+                correct: 2,
+                explanation: "The 7 ways are within agriculture and don't include gold mining"
+            },
+            {
+                question: "What is the recommended activity for families with less than 4 acres?",
+                options: ["Large scale cattle farming", "Poultry and piggery", "Plantation agriculture", "Cotton farming"],
+                correct: 1,
+                explanation: "Families with less than 4 acres should focus on poultry, piggery, mushrooms, and zero-grazing"
+            },
+            {
+                question: "How much can one acre of fruits generate per year?",
+                options: ["UGX 8 million", "UGX 12 million", "UGX 18 million", "UGX 20 million"],
+                correct: 1,
+                explanation: "One acre of fruits (mangoes, oranges, pineapples) can generate UGX 12 million per year"
+            },
+            {
+                question: "What is the main problem with land fragmentation?",
+                options: ["It's illegal", "It reduces land productivity", "It causes disputes", "It's too expensive"],
+                correct: 1,
+                explanation: "Land fragmentation 'disables' the land, making it unable to support profitable activities"
+            },
+            {
+                question: "Which sector includes hotels, transport, and professional services?",
+                options: ["Agriculture", "Industries", "Services", "ICT"],
+                correct: 2,
+                explanation: "Services sector includes hotels, transport companies, professional services, shops, etc."
+            },
+            {
+                question: "How many dairy cattle are recommended for one acre of pasture in the 4 acres plan?",
+                options: ["4 cattle", "6 cattle", "8 cattle", "10 cattle"],
+                correct: 2,
+                explanation: "The plan recommends 8 dairy cattle on one acre of pasture"
+            },
+            {
+                question: "What is the solution to land fragmentation recommended by President Museveni?",
+                options: ["Sell the land", "Divide equally", "Inheritance by shares", "Keep it unused"],
+                correct: 2,
+                explanation: "Inheritance should be by shares (emigabo), not by physical division of land"
+            }
+        ];
+
+        // Matching pairs
+        const matchingPairs = [
+            { left: "Coffee (1 acre)", right: "UGX 18 million/year", matched: false },
+            { left: "Fruits (1 acre)", right: "UGX 12 million/year", matched: false },
+            { left: "Dairy Cattle", right: "UGX 8 million/year", matched: false },
+            { left: "Commercial Agriculture", right: "First Sector", matched: false },
+            { left: "Industries", right: "Second Sector (5th Way)", matched: false },
+            { left: "Services", right: "Third Sector (6th Way)", matched: false },
+            { left: "ICT/BPO", right: "Fourth Sector (7th Way)", matched: false }
+        ];
+
+        // Business scenarios
+        const businessScenarios = [
+            {
+                question: "You have 4 acres. How should you allocate them?",
+                options: [
+                    { text: "1 acre coffee, 1 acre fruits, 1 acre food crops, 1 acre pasture", correct: true, points: 100 },
+                    { text: "4 acres of maize", correct: false, points: 0 },
+                    { text: "2 acres coffee, 2 acres cotton", correct: false, points: 20 },
+                    { text: "4 acres for cattle grazing", correct: false, points: 30 }
+                ],
+                explanation: "The 4 acres plan recommends: 1 acre each for coffee, fruits, food crops, and pasture for dairy cattle"
+            },
+            {
+                question: "You only have 2 acres. What's the best strategy?",
+                options: [
+                    { text: "Poultry and piggery in backyard", correct: true, points: 100 },
+                    { text: "Grow sugar cane", correct: false, points: 10 },
+                    { text: "Large scale maize", correct: false, points: 5 },
+                    { text: "Traditional cattle keeping", correct: false, points: 0 }
+                ],
+                explanation: "For families with less than 4 acres, focus on poultry, piggery, mushrooms, and zero-grazing"
+            },
+            {
+                question: "You want to start a manufacturing business. What should you consider?",
+                options: [
+                    { text: "Import substitution - make products Uganda imports", correct: true, points: 100 },
+                    { text: "Only focus on exports", correct: false, points: 40 },
+                    { text: "Copy what everyone else is doing", correct: false, points: 10 },
+                    { text: "Wait for government grants", correct: false, points: 0 }
+                ],
+                explanation: "Uganda imports many products that can be made locally - this creates jobs and saves foreign exchange"
+            }
+        ];
+
+        // Initialize stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Start different game modes
+        function startGame(mode) {
+            document.getElementById('mainMenu').classList.remove('active');
+            
+            if (mode === 'quiz') {
+                gameState.currentQuiz = 0;
+                document.getElementById('quizGame').classList.add('active');
+                loadQuizQuestion();
+            } else if (mode === 'match') {
+                document.getElementById('matchGame').classList.add('active');
+                loadMatchGame();
+            } else if (mode === 'business') {
+                gameState.businessScenario = 0;
+                gameState.budget = 10000000;
+                document.getElementById('businessGame').classList.add('active');
+                loadBusinessScenario();
+            } else if (mode === 'speed') {
+                document.getElementById('speedGame').classList.add('active');
+                startSpeedRound();
+            }
+        }
+
+        // Quiz Game
+        function loadQuizQuestion() {
+            const question = quizQuestions[gameState.currentQuiz];
+            const progress = ((gameState.currentQuiz + 1) / quizQuestions.length) * 100;
+            
+            document.getElementById('quizProgress').style.width = progress + '%';
+            document.getElementById('questionNum').textContent = gameState.currentQuiz + 1;
+            document.getElementById('quizQuestion').textContent = question.question;
+            
+            const optionsDiv = document.getElementById('quizOptions');
+            optionsDiv.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+                optionDiv.textContent = option;
+                optionDiv.onclick = () => checkAnswer(index, question.correct, question.explanation);
+                optionsDiv.appendChild(optionDiv);
+            });
+        }
+
+        function checkAnswer(selected, correct, explanation) {
+            const options = document.querySelectorAll('#quizOptions .option');
+            
+            if (selected === correct) {
+                options[selected].classList.add('correct');
+                addPoints(100);
+                gameState.streak++;
+                updateStats();
+                
+                setTimeout(() => {
+                    gameState.currentQuiz++;
+                    if (gameState.currentQuiz < quizQuestions.length) {
+                        loadQuizQuestion();
+                    } else {
+                        showAchievement('Quiz Master! 🎓', 'You completed all questions!');
+                        checkLevelUp();
+                        setTimeout(() => backToMenu(), 2000);
+                    }
+                }, 1500);
+            } else {
+                options[selected].classList.add('incorrect');
+                options[correct].classList.add('correct');
+                gameState.streak = 0;
+                updateStats();
+                
+                setTimeout(() => {
+                    gameState.currentQuiz++;
+                    if (gameState.currentQuiz < quizQuestions.length) {
+                        loadQuizQuestion();
+                    } else {
+                        setTimeout(() => backToMenu(), 2000);
+                    }
+                }, 2000);
+            }
+        }
+
+        // Match Game
+        let selectedLeft = null;
+        let selectedRight = null;
+        let matchedCount = 0;
+
+        function loadMatchGame() {
+            const container = document.getElementById('matchContainer');
+            container.innerHTML = '';
+            
+            const leftColumn = document.createElement('div');
+            leftColumn.className = 'match-column';
+            const rightColumn = document.createElement('div');
+            rightColumn.className = 'match-column';
+            
+            // Shuffle for variety
+            const shuffledPairs = [...matchingPairs].sort(() => Math.random() - 0.5);
+            const shuffledRight = shuffledPairs.map(p => p.right).sort(() => Math.random() - 0.5);
+            
+            shuffledPairs.forEach((pair, index) => {
+                const leftItem = document.createElement('div');
+                leftItem.className = 'match-item';
+                leftItem.textContent = pair.left;
+                leftItem.dataset.id = index;
+                leftItem.onclick = () => selectLeft(index);
+                leftColumn.appendChild(leftItem);
+            });
+            
+            shuffledRight.forEach((right, index) => {
+                const rightItem = document.createElement('div');
+                rightItem.className = 'match-item';
+                rightItem.textContent = right;
+                rightItem.dataset.right = right;
+                rightItem.onclick = () => selectRight(right);
+                rightColumn.appendChild(rightItem);
+            });
+            
+            container.appendChild(leftColumn);
+            container.appendChild(rightColumn);
+            
+            matchedCount = 0;
+            updateMatchProgress();
+        }
+
+        function selectLeft(id) {
+            if (matchingPairs[id].matched) return;
+            
+            document.querySelectorAll('.match-column:first-child .match-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            const selected = document.querySelector(`.match-column:first-child .match-item[data-id="${id}"]`);
+            selected.classList.add('selected');
+            selectedLeft = id;
+            
+            if (selectedRight !== null) {
+                checkMatch();
+            }
+        }
+
+        function selectRight(right) {
+            document.querySelectorAll('.match-column:last-child .match-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            const selected = document.querySelector(`.match-column:last-child .match-item[data-right="${right}"]`);
+            selected.classList.add('selected');
+            selectedRight = right;
+            
+            if (selectedLeft !== null) {
+                checkMatch();
+            }
+        }
+
+        function checkMatch() {
+            const pair = matchingPairs[selectedLeft];
+            
+            if (pair.right === selectedRight) {
+                pair.matched = true;
+                
+                const leftItem = document.querySelector(`.match-column:first-child .match-item[data-id="${selectedLeft}"]`);
+                const rightItem = document.querySelector(`.match-column:last-child .match-item[data-right="${selectedRight}"]`);
+                
+                leftItem.classList.add('matched');
+                rightItem.classList.add('matched');
+                
+                addPoints(150);
+                matchedCount++;
+                updateMatchProgress();
+                
+                if (matchedCount === matchingPairs.length) {
+                    showAchievement('Perfect Match! 🎯', 'You matched all pairs correctly!');
+                    checkLevelUp();
+                    setTimeout(() => backToMenu(), 2000);
+                }
+            }
+            
+            selectedLeft = null;
+            selectedRight = null;
+        }
+
+        function updateMatchProgress() {
+            const progress = (matchedCount / matchingPairs.length) * 100;
+            document.getElementById('matchProgress').style.width = progress + '%';
+            document.getElementById('matchCount').textContent = matchedCount;
+        }
+
+        // Business Simulator
+        function loadBusinessScenario() {
+            const scenario = businessScenarios[gameState.businessScenario];
+            const scenarioDiv = document.getElementById('businessScenario');
+            
+            scenarioDiv.innerHTML = `
+                <h3>${scenario.question}</h3>
+                <div class="investment-options">
+                    ${scenario.options.map((option, index) => `
+                        <div class="investment-btn" onclick="makeInvestment(${index})">
+                            <strong>${option.text}</strong>
+                            <div style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                                ${option.correct ? '✓ Recommended' : 'Consider carefully'}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            document.getElementById('budget').textContent = gameState.budget.toLocaleString();
+        }
+
+        function makeInvestment(index) {
+            const scenario = businessScenarios[gameState.businessScenario];
+            const option = scenario.options[index];
+            
+            const feedback = document.createElement('div');
+            feedback.className = `feedback-message ${option.correct ? 'success' : 'error'}`;
+            feedback.innerHTML = `
+                <strong>${option.correct ? '✓ Excellent Choice!' : '✗ Not the best option'}</strong>
+                <p>${scenario.explanation}</p>
+                <p>Points earned: ${option.points}</p>
+            `;
+            
+            document.getElementById('businessScenario').prepend(feedback);
+            
+            addPoints(option.points);
+            gameState.budget += option.points * 1000;
+            document.getElementById('budget').textContent = gameState.budget.toLocaleString();
+        }
+
+        function nextBusinessScenario() {
+            gameState.businessScenario++;
+            if (gameState.businessScenario < businessScenarios.length) {
+                loadBusinessScenario();
+            } else {
+                showAchievement('Business Tycoon! 💼', 'You completed all scenarios!');
+                checkLevelUp();
+                setTimeout(() => backToMenu(), 2000);
+            }
+        }
+
+        // Speed Round
+        let speedTimer;
+        let speedScore = 0;
+        let currentSpeedQuestion = 0;
+
+        function startSpeedRound() {
+            speedScore = 0;
+            currentSpeedQuestion = 0;
+            let timeLeft = 60;
+            
+            document.getElementById('speedScore').textContent = speedScore;
+            document.getElementById('timer').textContent = timeLeft;
+            
+            loadSpeedQuestion();
+            
+            speedTimer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('timer').textContent = timeLeft;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(speedTimer);
+                    showAchievement(`Speed Master! ⚡`, `You got ${speedScore} correct answers!`);
+                    addPoints(speedScore * 50);
+                    checkLevelUp();
+                    setTimeout(() => backToMenu(), 2000);
+                }
+            }, 1000);
+        }
+
+        function loadSpeedQuestion() {
+            const question = quizQuestions[currentSpeedQuestion % quizQuestions.length];
+            
+            document.getElementById('speedQuestion').textContent = question.question;
+            
+            const optionsDiv = document.getElementById('speedOptions');
+            optionsDiv.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+                optionDiv.textContent = option;
+                optionDiv.onclick = () => checkSpeedAnswer(index, question.correct);
+                optionsDiv.appendChild(optionDiv);
+            });
+        }
+
+        function checkSpeedAnswer(selected, correct) {
+            if (selected === correct) {
+                speedScore++;
+                document.getElementById('speedScore').textContent = speedScore;
+                addPoints(50);
+            }
+            
+            currentSpeedQuestion++;
+            loadSpeedQuestion();
+        }
+
+        // Points and achievements
+        function addPoints(points) {
+            gameState.points += points;
+            updateStats();
+        }
+
+        function updateStats() {
+            document.getElementById('totalPoints').textContent = gameState.points.toLocaleString();
+            document.getElementById('level').textContent = gameState.level;
+            document.getElementById('achievements').textContent = `${gameState.achievements.length}/15`;
+            document.getElementById('streak').textContent = gameState.streak + '🔥';
+        }
+
+        function checkLevelUp() {
+            const newLevel = Math.floor(gameState.points / 1000) + 1;
+            if (newLevel > gameState.level) {
+                gameState.level = newLevel;
+                showAchievement('Level Up! 🌟', `You reached level ${newLevel}!`);
+                updateStats();
+            }
+        }
+
+        function showAchievement(title, description) {
+            if (!gameState.achievements.includes(title)) {
+                gameState.achievements.push(title);
+            }
+            
+            document.getElementById('achievementTitle').textContent = title;
+            document.getElementById('achievementDesc').textContent = description;
+            document.getElementById('achievementPopup').classList.add('show');
+            
+            updateStats();
+        }
+
+        function closeAchievement() {
+            document.getElementById('achievementPopup').classList.remove('show');
+        }
+
+        function backToMenu() {
+            document.querySelectorAll('.game-screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById('mainMenu').classList.add('active');
+            
+            if (speedTimer) {
+                clearInterval(speedTimer);
+            }
+        }
+
+        // Initialize
+        createStars();
+        updateStats();
+    </script>
+</body>
+</html>
